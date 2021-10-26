@@ -4,6 +4,7 @@
     Background:
       * url 'https://reqres.in/'
 
+    @test1
     Scenario: Successful register
       * def registerRequest = {"email": "eve.holt@reqres.in", "password": "pistol"}
       Given path '/api/register'
@@ -14,6 +15,7 @@
       * def resultControl = response.token
       * match resultControl == '#notnull'
 
+    @test2
     Scenario: Unsuccessful login
       * def loginRequest = {"email": "eve.holt@reqres.in"}
       Given path '/api/login'
@@ -24,6 +26,7 @@
       * def resultControl = response.error
       * match resultControl == 'Missing password'
 
+    @test3
     Scenario: Successful login
       * def loginRequest = {"email": "eve.holt@reqres.in", "password": "pistol"}
       Given path '/api/login'
@@ -34,6 +37,7 @@
       * def resultControl = response.token
       * match resultControl == '#notnull'
 
+    @test4
     Scenario Outline: List users from first page
       Given path '/api/users?<pageParam>'
       When method GET
@@ -46,6 +50,7 @@
       |  page=1 | 0,1,2,3,4,5   | 1,2,3,4,5,6     |
       |  page=2 | 0,1,2,3,4,5   | 7,8,9,10,11,12  |
 
+    @test5
     Scenario: Update user information
       * def updateRequest = {"name": "ronald billius", "job": "hogwarts student"}
       Given path '/api/users/1'
