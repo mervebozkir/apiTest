@@ -4965,3 +4965,1338 @@ src/test/java/task2/reqRes.feature:42
 }
  
 18:03:17.426 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/task2/reqRes.feature
+09:20:38.683 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:20:38.695 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1635315638690
+09:20:38.720 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 8 - ^Successful register$
+09:20:39.718 [main] INFO  com.intuit.karate - karate.env system property was: null 
+09:20:40.234 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/register
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"password":"pistol","email":"eve.holt@reqres.in"}
+
+09:20:40.959 [main] DEBUG com.intuit.karate - response time in milliseconds: 718
+1 < 200
+1 < Date: Wed, 27 Oct 2021 06:20:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 36
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zf7WKsHYjc10rbZNgGIVq5%2FXcuzvFZS4Y1uCTlRFkEjPoBNqExHAeg4Shc4r%2B4PmNBQXYUgpUGrSdgluqckEr1HFKQ0GadB6DaL1P06FmYkxU0vevOYmi481d%2BU%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a49d1e5287750f3-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"id":4,"token":"QpwL5tke4Pnpja7X4"}
+09:20:40.971 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "token": "QpwL5tke4Pnpja7X4"
+}
+ 
+09:20:41.493 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/task2/reqRes.feature
+09:41:53.695 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:41:53.708 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1635316913703
+09:41:53.734 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 8 - ^Successful register$
+09:41:54.659 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   if (env == 'dev') {
+13:     // customize
+14:     // e.g. config.foo = 'bar';
+15:   } else if (env == 'e2e') {
+16:     // customize
+17:   }
+18:   return config;
+19: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found if
+  if (env == 'dev') {
+  ^
+Unnamed:15:2 Expected eof but found }
+  } else if (env == 'e2e') {
+  ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:41:55.301 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/task2/reqRes.feature
+09:42:56.126 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:42:56.137 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1635316976133
+09:42:56.160 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 8 - ^Successful register$
+09:42:56.915 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:42:57.477 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/task2/reqRes.feature
+09:58:33.651 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:58:34.632 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:58:34.658 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:58:34.676 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:58:34.697 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:58:34.717 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:58:34.733 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:22.814 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:24.868 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:24.927 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:24.963 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:25.003 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:25.043 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:25.082 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.481 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:59:26.499 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.523 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.547 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.576 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.603 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+09:59:26.621 [main] ERROR com.intuit.karate - scenario [run] failed
+>>>> js failed:
+01: (function fn() {
+02:   var env = karate.env; // get system property 'karate.env'
+03:   karate.log('karate.env system property was:', env);
+04:   if (!env) {
+05:     env = 'test';
+06:   }
+07:   var config = {
+08:     baseUrl : 'https://reqres.in/'
+09:     env: env,
+10:     myVarName: 'someValue'
+11:   }
+12:   return config;
+13: })
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:9:4 Expected comma but found ident
+    env: env,
+    ^
+Unnamed:12:2 Expected ) but found return
+  return config;
+  ^
+Unnamed:13:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:121)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:117)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1171)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:288)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:363)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:389)
+
+10:00:13.203 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/register
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"password":"pistol","email":"eve.holt@reqres.in"}
+
+10:00:13.882 [main] DEBUG com.intuit.karate - response time in milliseconds: 671
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 36
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wiV5yNrU6YU8zoAgIidcEh6VaCGahv8gpfOIUI%2FJT6BpamXBMGKj%2FK78UJaXufGcwYmMkg%2FIU2n2%2FFLcdDxi1KgkBJyu%2FmptO3PdrR0PL1QthcYSyDqSj7EKULQ%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd42be75123-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"id":4,"token":"QpwL5tke4Pnpja7X4"}
+10:00:13.909 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "token": "QpwL5tke4Pnpja7X4"
+}
+ 
+10:00:13.937 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 30
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"email":"eve.holt@reqres.in"}
+
+10:00:14.129 [main] DEBUG com.intuit.karate - response time in milliseconds: 191
+1 < 400
+1 < Date: Wed, 27 Oct 2021 07:00:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 28
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"1c-NmpazMScs9tOqR7eDEesn+pqC9Q"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZdEM6Lp5IqpLZ72XcOSrG0MrHxzcPG0hTy15UWiCJ3p9GwZxibfBesuIWSWxTVK%2BhqGFxaZotk3BYt7skJ8jI1MwFrODNG7aRu8C8JVFok%2B3b1RbIHmh%2Fwj1nc0%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd64971cb2a-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"error":"Missing password"}
+10:00:14.140 [main] INFO  com.intuit.karate - [print] {
+  "error": "Missing password"
+}
+ 
+10:00:14.169 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"password":"pistol","email":"eve.holt@reqres.in"}
+
+10:00:14.326 [main] DEBUG com.intuit.karate - response time in milliseconds: 156
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zdbp%2BDV3%2FycZ1X8AXD28C7IrRBQH7Q3XczWQkciaq4YbQkUxR0DpzYBWx1PtUEXJt4lu9%2F8iN7Sa8P23SHEB%2Bbc64%2B9KFiv7818hoYTVRWyftGCfBi8nHJJqkiI%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd789b6da3a-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"token":"QpwL5tke4Pnpja7X4"}
+10:00:14.329 [main] INFO  com.intuit.karate - [print] {
+  "token": "QpwL5tke4Pnpja7X4"
+}
+ 
+10:00:14.344 [main] DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users?page=1
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:00:14.380 [main] DEBUG com.intuit.karate - response time in milliseconds: 35
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"
+1 < via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: HIT
+1 < Age: 1888
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bvt8Edx88oUUY1CiRigG6xNsbVbW9HQHpNfPrkJHVIqvmW5vCnc2mYkxpkW51rv4pxCgkMzrqFpttU7xwrC9rmDx6gqcIhMyWA2igmpTSUdX9Oa47ciqAkVOFjo%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd89ff8e182-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"per_page":6,"total":12,"data":[{"last_name":"Bluth","id":1,"avatar":"https:\/\/reqres.in\/img\/faces\/1-image.jpg","first_name":"George","email":"george.bluth@reqres.in"},{"last_name":"Weaver","id":2,"avatar":"https:\/\/reqres.in\/img\/faces\/2-image.jpg","first_name":"Janet","email":"janet.weaver@reqres.in"},{"last_name":"Wong","id":3,"avatar":"https:\/\/reqres.in\/img\/faces\/3-image.jpg","first_name":"Emma","email":"emma.wong@reqres.in"},{"last_name":"Holt","id":4,"avatar":"https:\/\/reqres.in\/img\/faces\/4-image.jpg","first_name":"Eve","email":"eve.holt@reqres.in"},{"last_name":"Morris","id":5,"avatar":"https:\/\/reqres.in\/img\/faces\/5-image.jpg","first_name":"Charles","email":"charles.morris@reqres.in"},{"last_name":"Ramos","id":6,"avatar":"https:\/\/reqres.in\/img\/faces\/6-image.jpg","first_name":"Tracey","email":"tracey.ramos@reqres.in"}],"page":1,"total_pages":2,"support":{"text":"To keep ReqRes free, contributions towards server costs are appreciated!","url":"https:\/\/reqres.in\/#support-heading"}}
+10:00:14.383 [main] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "last_name": "Bluth",
+      "id": 1,
+      "avatar": "https://reqres.in/img/faces/1-image.jpg",
+      "first_name": "George",
+      "email": "george.bluth@reqres.in"
+    },
+    {
+      "last_name": "Weaver",
+      "id": 2,
+      "avatar": "https://reqres.in/img/faces/2-image.jpg",
+      "first_name": "Janet",
+      "email": "janet.weaver@reqres.in"
+    },
+    {
+      "last_name": "Wong",
+      "id": 3,
+      "avatar": "https://reqres.in/img/faces/3-image.jpg",
+      "first_name": "Emma",
+      "email": "emma.wong@reqres.in"
+    },
+    {
+      "last_name": "Holt",
+      "id": 4,
+      "avatar": "https://reqres.in/img/faces/4-image.jpg",
+      "first_name": "Eve",
+      "email": "eve.holt@reqres.in"
+    },
+    {
+      "last_name": "Morris",
+      "id": 5,
+      "avatar": "https://reqres.in/img/faces/5-image.jpg",
+      "first_name": "Charles",
+      "email": "charles.morris@reqres.in"
+    },
+    {
+      "last_name": "Ramos",
+      "id": 6,
+      "avatar": "https://reqres.in/img/faces/6-image.jpg",
+      "first_name": "Tracey",
+      "email": "tracey.ramos@reqres.in"
+    }
+  ],
+  "page": 1,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}
+ 
+10:00:14.406 [main] DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users?page=2
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:00:14.450 [main] DEBUG com.intuit.karate - response time in milliseconds: 44
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:14 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
+1 < via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: HIT
+1 < Age: 2951
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bXpN59bdHDEmsl%2Fg7ArJg6Fm%2BtOgsAMT2jAJI9Ux%2B9oFwTt%2BSlSqRrUYv01mfbraqZcjB%2FxR5DjdD1QFHnTg0vPRv0mFA3XqBKC6g%2B4pw6n3qbsqzpSrWUOLgJI%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd91cf3e196-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"per_page":6,"total":12,"data":[{"last_name":"Lawson","id":7,"avatar":"https:\/\/reqres.in\/img\/faces\/7-image.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/reqres.in\/img\/faces\/8-image.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/reqres.in\/img\/faces\/9-image.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/reqres.in\/img\/faces\/10-image.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/reqres.in\/img\/faces\/11-image.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/reqres.in\/img\/faces\/12-image.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}],"page":2,"total_pages":2,"support":{"text":"To keep ReqRes free, contributions towards server costs are appreciated!","url":"https:\/\/reqres.in\/#support-heading"}}
+10:00:14.452 [main] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://reqres.in/img/faces/7-image.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://reqres.in/img/faces/8-image.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://reqres.in/img/faces/9-image.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://reqres.in/img/faces/10-image.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://reqres.in/img/faces/11-image.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://reqres.in/img/faces/12-image.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}
+ 
+10:00:14.464 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://reqres.in/api/users/1
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"name":"ronald billius","job":"hogwarts student"}
+
+10:00:14.631 [main] DEBUG com.intuit.karate - response time in milliseconds: 167
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"59-H9tsrsZhRofNOjnuPuukXFehGWU"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Qv5zhNdefvdm7Yk3DZ%2BLU%2B728L6oRn8IIpQkGtoxmiKRRQg1sful5dCWSxKewNAOnx%2BZ%2B06blaeGtx27dkZ6%2BzhrSBGdYvq5BoEbArdgMr%2B0nMrMDxgJM9F%2FeLY%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bd96b97e17e-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"name":"ronald billius","job":"hogwarts student","updatedAt":"2021-10-27T07:00:15.046Z"}
+10:00:14.636 [main] INFO  com.intuit.karate - [print] {
+  "name": "ronald billius",
+  "job": "hogwarts student",
+  "updatedAt": "2021-10-27T07:00:15.046Z"
+}
+ 
+10:00:15.387 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/register
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"password":"pistol","email":"eve.holt@reqres.in"}
+
+10:00:15.540 [main] DEBUG com.intuit.karate - response time in milliseconds: 152
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 36
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PXV7mAZZfb%2FuetImw5DCkojrK5iL2MpyjzvLvNOSmrQ8t1TcJg3CMvPnxaGT8T%2BymGuBjyGwjG9AF79KOcGDCb8Ud03aN5Z4C%2FDMGLmDMQibiBl%2FsH%2B9K531eq4%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0bdf2e1850d5-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"id":4,"token":"QpwL5tke4Pnpja7X4"}
+10:00:15.547 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "token": "QpwL5tke4Pnpja7X4"
+}
+ 
+10:00:15.579 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 30
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"email":"eve.holt@reqres.in"}
+
+10:00:15.772 [main] DEBUG com.intuit.karate - response time in milliseconds: 191
+1 < 400
+1 < Date: Wed, 27 Oct 2021 07:00:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 28
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"1c-NmpazMScs9tOqR7eDEesn+pqC9Q"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mcT4hj%2BGu9JuZTtBjshZ4E1ivpi%2BzLV25ToyLDZHwAVyRsI6QeJXMjBKIIC%2FkTkHVmie90HG%2BWa9YJw9yXVc%2FkfIY5tgYXRmjs4g5HyEl592VlwQLwvbrGzJ1aw%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0be08ec0e17e-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"error":"Missing password"}
+10:00:15.775 [main] INFO  com.intuit.karate - [print] {
+  "error": "Missing password"
+}
+ 
+10:00:15.809 [main] DEBUG com.intuit.karate - request:
+1 > POST https://reqres.in/api/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"password":"pistol","email":"eve.holt@reqres.in"}
+
+10:00:16.111 [main] DEBUG com.intuit.karate - response time in milliseconds: 301
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 29
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=x5osl2Dr0eWy8r8TKHL5N5qSWeMI9FsZ9KQVnwz1s12oX44JuVxXdsmZDdv6LO4gwaY5IM5NoXu42YnNlUxi3SHhNpMCyrkNmKRG3ms9rRF3vMQCme2jyvgy5L4%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0be20e03da0e-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"token":"QpwL5tke4Pnpja7X4"}
+10:00:16.115 [main] INFO  com.intuit.karate - [print] {
+  "token": "QpwL5tke4Pnpja7X4"
+}
+ 
+10:00:16.138 [main] DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users?page=1
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:00:16.210 [main] DEBUG com.intuit.karate - response time in milliseconds: 70
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"3e4-2RLXvr5wTg9YQ6aH95CkYoFNuO8"
+1 < via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: HIT
+1 < Age: 1890
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Eg7KXQxaANof09abzybfEwdX4qdTcDGemKUYUEmRLyd9te9IYLg20YV%2B0xaDx0jqR%2FKhM5EmmkqWKrIB1ZK3UGO%2BLcI2iCfbOMJsyMaRXYknRVsKm3O%2FFeqoMuU%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0be40cd250a6-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"per_page":6,"total":12,"data":[{"last_name":"Bluth","id":1,"avatar":"https:\/\/reqres.in\/img\/faces\/1-image.jpg","first_name":"George","email":"george.bluth@reqres.in"},{"last_name":"Weaver","id":2,"avatar":"https:\/\/reqres.in\/img\/faces\/2-image.jpg","first_name":"Janet","email":"janet.weaver@reqres.in"},{"last_name":"Wong","id":3,"avatar":"https:\/\/reqres.in\/img\/faces\/3-image.jpg","first_name":"Emma","email":"emma.wong@reqres.in"},{"last_name":"Holt","id":4,"avatar":"https:\/\/reqres.in\/img\/faces\/4-image.jpg","first_name":"Eve","email":"eve.holt@reqres.in"},{"last_name":"Morris","id":5,"avatar":"https:\/\/reqres.in\/img\/faces\/5-image.jpg","first_name":"Charles","email":"charles.morris@reqres.in"},{"last_name":"Ramos","id":6,"avatar":"https:\/\/reqres.in\/img\/faces\/6-image.jpg","first_name":"Tracey","email":"tracey.ramos@reqres.in"}],"page":1,"total_pages":2,"support":{"text":"To keep ReqRes free, contributions towards server costs are appreciated!","url":"https:\/\/reqres.in\/#support-heading"}}
+10:00:16.212 [main] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "last_name": "Bluth",
+      "id": 1,
+      "avatar": "https://reqres.in/img/faces/1-image.jpg",
+      "first_name": "George",
+      "email": "george.bluth@reqres.in"
+    },
+    {
+      "last_name": "Weaver",
+      "id": 2,
+      "avatar": "https://reqres.in/img/faces/2-image.jpg",
+      "first_name": "Janet",
+      "email": "janet.weaver@reqres.in"
+    },
+    {
+      "last_name": "Wong",
+      "id": 3,
+      "avatar": "https://reqres.in/img/faces/3-image.jpg",
+      "first_name": "Emma",
+      "email": "emma.wong@reqres.in"
+    },
+    {
+      "last_name": "Holt",
+      "id": 4,
+      "avatar": "https://reqres.in/img/faces/4-image.jpg",
+      "first_name": "Eve",
+      "email": "eve.holt@reqres.in"
+    },
+    {
+      "last_name": "Morris",
+      "id": 5,
+      "avatar": "https://reqres.in/img/faces/5-image.jpg",
+      "first_name": "Charles",
+      "email": "charles.morris@reqres.in"
+    },
+    {
+      "last_name": "Ramos",
+      "id": 6,
+      "avatar": "https://reqres.in/img/faces/6-image.jpg",
+      "first_name": "Tracey",
+      "email": "tracey.ramos@reqres.in"
+    }
+  ],
+  "page": 1,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}
+ 
+10:00:16.237 [main] DEBUG com.intuit.karate - request:
+1 > GET https://reqres.in/api/users?page=2
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:00:16.279 [main] DEBUG com.intuit.karate - response time in milliseconds: 42
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"
+1 < via: 1.1 vegur
+1 < Cache-Control: max-age=14400
+1 < CF-Cache-Status: HIT
+1 < Age: 2953
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kPxwlO7l4ra3XcuhcAAXLlAPJbui%2Fw5NIGl7LEt4zZEs0cCPMY5Es55D1lgXOke0rKCWJzCcCBTqE4BF1XM%2F23UaWO1iSS9a%2BnPZGkleipA2dWTrf6G1iZqilj4%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0be48e55e18e-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"per_page":6,"total":12,"data":[{"last_name":"Lawson","id":7,"avatar":"https:\/\/reqres.in\/img\/faces\/7-image.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/reqres.in\/img\/faces\/8-image.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/reqres.in\/img\/faces\/9-image.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/reqres.in\/img\/faces\/10-image.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/reqres.in\/img\/faces\/11-image.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/reqres.in\/img\/faces\/12-image.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}],"page":2,"total_pages":2,"support":{"text":"To keep ReqRes free, contributions towards server costs are appreciated!","url":"https:\/\/reqres.in\/#support-heading"}}
+10:00:16.281 [main] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://reqres.in/img/faces/7-image.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://reqres.in/img/faces/8-image.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://reqres.in/img/faces/9-image.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://reqres.in/img/faces/10-image.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://reqres.in/img/faces/11-image.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://reqres.in/img/faces/12-image.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2,
+  "support": {
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
+    "url": "https://reqres.in/#support-heading"
+  }
+}
+ 
+10:00:16.291 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://reqres.in/api/users/1
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: reqres.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"name":"ronald billius","job":"hogwarts student"}
+
+10:00:16.454 [main] DEBUG com.intuit.karate - response time in milliseconds: 163
+1 < 200
+1 < Date: Wed, 27 Oct 2021 07:00:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < etag: W/"59-XzcmCBcwB3cFuOGNJhVnM+DdFik"
+1 < via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VmVnM7hN5BeaJl%2B8jxLMBm7sht5ZnefayIUVS1YGcWFZGs17k0E7rMdl%2FF9m39Yp%2FK1idl9v8a0E61wOrbVwNX8SPmQyTaUGBc02sXm%2F7lI5lb2ClIaTTw3%2Fkvs%3D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Vary: Accept-Encoding
+1 < Server: cloudflare
+1 < CF-RAY: 6a4a0be4df05da0e-IST
+1 < alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400
+{"name":"ronald billius","job":"hogwarts student","updatedAt":"2021-10-27T07:00:16.869Z"}
+10:00:16.455 [main] INFO  com.intuit.karate - [print] {
+  "name": "ronald billius",
+  "job": "hogwarts student",
+  "updatedAt": "2021-10-27T07:00:16.869Z"
+}
+ 
